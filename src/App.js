@@ -1,27 +1,24 @@
 import React from "react";
 import "./App.css";
-
-import PersonComponent from "./components/MyNewComponent";
-var peopleArr = [
-  { firstName: "Jane", lastName: "Doe", age: 45, hairColor: "Black" },
-  { firstName: "John", lastName: "Smith", age: 88, hairColor: "Brown" },
-  { firstName: "Millard", lastName: "Fillmore", age: 50, hairColor: "Brown" },
-  { firstName: "Maria", lastName: "Smith", age: 62, hairColor: "Brown" },
-];
+import PersonCard from "./components/MyNewComponent";
 
 function App() {
   return (
-    <div className="App">
-      {peopleArr.map((person) => {
-        return (
-          <PersonComponent
-            firstName={person.firstName}
-            lastName={person.lastName}
-            age={person.age}
-            hairColor={person.hairColor}
-          />
-        );
-      })}
+    <div>
+      <PersonCard firstName="John" lastName="Doe" age={5} hairColor="Blue" />
+      <PersonCard
+        firstName="Bob"
+        lastName="Boberson"
+        age={55}
+        hairColor="black"
+      />
+      <PersonCard
+        firstName="Jiff"
+        lastName="Giff"
+        age={41}
+        hairColor="Blonde"
+      />
+      <PersonCard firstName="Gosh" lastName="Darn" age={54} hairColor="Brown" />
     </div>
   );
 }
